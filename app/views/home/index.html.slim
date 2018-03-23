@@ -1,0 +1,7 @@
+h2
+  = @organization&.name
+.clearfix
+  = button_to I18n.t('fetch'), fetch_data_home_index_path, method: :post, class: 'button right'
+.clearfix
+  .pipes
+    = render 'pipes'

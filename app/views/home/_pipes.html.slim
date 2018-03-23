@@ -1,0 +1,33 @@
+- unless @pipes.blank?
+  - @pipes.each do |pipe|
+    h3
+      = pipe.name
+
+    table
+      thead
+        tr
+          th
+            = I18n.t('title')
+          th
+            = I18n.t('created_at')
+          th
+            = I18n.t('phase')
+          th
+            = I18n.t('due_date')
+          - pipe.fields_title.each do |header|
+            th
+              = header
+      tbody
+        - pipe.cards.each do |card|
+          tr
+            td
+              = card.name
+            td
+              = card.created_at_formated
+            td
+              = card.phase
+            td
+              = card.due_date_formated
+            - pipe.fields_title.each do |header|
+              td
+                = card.field_by_name(header)
