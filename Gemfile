@@ -10,11 +10,16 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'slim-rails'
 gem 'pg', '~> 1.0'
+gem 'graphlient'
+
+gem 'foundation-rails'
+gem 'autoprefixer-rails'
 
 group :development, :test do
   gem 'sqlite3'
   gem 'pry'
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -28,6 +33,8 @@ group :test do
   gem 'capybara', '~> 2.15'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
+  gem 'shoulda-matchers'
+  gem 'webmock'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
