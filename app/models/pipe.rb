@@ -9,7 +9,7 @@ class Pipe < ApplicationRecord
 
   def self.build_from(obj)
     return if obj.blank?
-    pipe = Pipe.create_with({name: obj.name}).find_or_initialize_by(ext_id: obj.id)
+    pipe = Pipe.create_with(name: obj.name).find_or_initialize_by(ext_id: obj.id)
     obj.phases.each do |phase|
       pipe.phases << Phase.build_from(phase)
     end

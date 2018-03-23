@@ -7,7 +7,7 @@ class Organization < ApplicationRecord
 
   def self.create_from(obj, ext_id)
     return if obj.blank?
-    organization = Organization.create_with({name: obj.name}).find_or_create_by(ext_id: ext_id)
+    organization = Organization.create_with(name: obj.name).find_or_create_by(ext_id: ext_id)
     obj.pipes.each do |pipe|
       organization.pipes << Pipe.build_from(pipe)
     end
