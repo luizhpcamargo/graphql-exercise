@@ -14,7 +14,6 @@ class HomeController < ApplicationController
   private
 
   def load_organization
-    @organization = Organization.find_by(ext_id: Rails.application.secrets.organization_id)
-    @pipes = @organization&.pipes.info
+    @organization = Organization.find_by(ext_id: Rails.application.secrets.organization_id)&.decorate
   end
 end

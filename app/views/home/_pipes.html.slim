@@ -1,5 +1,5 @@
-- unless @pipes.blank?
-  - @pipes.each do |pipe|
+- unless @organization&.pipes.blank?
+  - @organization.pipes.each do |pipe|
     h3
       = pipe.name
 
@@ -17,17 +17,21 @@
           - pipe.fields_title.each do |header|
             th
               = header
+          th
+            = I18n.t('labels')
       tbody
         - pipe.cards.each do |card|
           tr
             td
               = card.name
             td
-              = card.created_at_formated
+              = card.created_at
             td
-              = card.phase
+              = card.phase_name
             td
-              = card.due_date_formated
+              = card.due_date
             - pipe.fields_title.each do |header|
               td
                 = card.field_by_name(header)
+            td
+              = card.labels

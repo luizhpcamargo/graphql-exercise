@@ -7,8 +7,6 @@ class Pipe < ApplicationRecord
 
   validates_uniqueness_of :ext_id
 
-  scope :info, -> { includes(phases: [:fields, cards: [:fields, :labels]]).references(phases: [:fields, cards: [:fields, :labels]]) }
-
   def self.build_from(obj)
     return if obj.blank?
     pipe = Pipe.create_with({name: obj.name}).find_or_initialize_by(ext_id: obj.id)
@@ -21,5 +19,4 @@ class Pipe < ApplicationRecord
   def fields_title
     cards.map(&:fields_title).flatten.uniq
   end
-
 end

@@ -1,5 +1,5 @@
 class Organization < ApplicationRecord
-  has_many :pipes, dependent: :destroy
+  has_many :pipes,dependent: :destroy
   accepts_nested_attributes_for :pipes
 
   validates_presence_of :name

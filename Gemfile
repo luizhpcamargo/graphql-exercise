@@ -14,6 +14,7 @@ gem 'graphlient'
 
 gem 'foundation-rails'
 gem 'autoprefixer-rails'
+gem 'draper'
 
 group :development, :test do
   gem 'sqlite3'

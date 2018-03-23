@@ -29,11 +29,4 @@ class Card < ApplicationRecord
   def field_by_name(name)
     fields.find_by(name: name)
   end
-
-  %w(created_at due_date).each do |param|
-    define_method "#{param}_formated" do
-      date = method(param).call
-      I18n.l(date) if date.present?
-    end
-  end
 end

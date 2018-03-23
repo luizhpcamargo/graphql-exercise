@@ -20,8 +20,4 @@ class Phase < ApplicationRecord
     end
     phase
   end
-
-  def to_s
-    name
-  end
 end

@@ -4,6 +4,7 @@ en:
   phase: Phase
   due_date: Due date
   fetch: Fetch data
+  labels: Labels
   time:
     formats:
       default: "%d/%m/%Y"
