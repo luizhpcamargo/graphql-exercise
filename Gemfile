@@ -3,9 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.0'
 
-gem 'rails', '~> 5.2.0.rc1'
-gem 'puma', '~> 3.11'
-gem 'sass-rails', '~> 5.0'
+gem 'rails', '~> 6.1.7.3'
+gem 'puma', '~> 4.3', '>= 4.3.12'
+gem 'sass-rails', '~> 6.0', '>= 6.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'slim-rails'
@@ -14,7 +14,7 @@ gem 'graphlient'
 
 gem 'foundation-rails'
 gem 'autoprefixer-rails'
-gem 'draper'
+gem 'draper', '>= 3.1.0'
 
 group :development, :test do
   gem 'sqlite3'
@@ -24,14 +24,14 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'web-console', '>= 3.5.1'
+  gem 'listen', '>= 3.1.5', '< 3.2'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen', '~> 2.0.1'
 end
 
 group :test do
-  gem 'capybara', '~> 2.15'
+  gem 'capybara', '~> 2.18', '>= 2.18.0'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'shoulda-matchers'
