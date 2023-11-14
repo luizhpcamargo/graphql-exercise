@@ -3,37 +3,37 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.0'
 
-gem 'rails', '~> 5.2.0.rc1'
+gem 'rails', '~> 5.2.0.0'
 gem 'puma', '~> 3.11'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0', '>= 5.0.8'
 gem 'uglifier', '>= 1.3.0'
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'slim-rails'
+gem 'slim-rails', '>= 3.2.0'
 gem 'pg', '~> 1.0'
 gem 'graphlient'
 
-gem 'foundation-rails'
+gem 'foundation-rails', '>= 5.5.0.0'
 gem 'autoprefixer-rails'
-gem 'draper'
+gem 'draper', '>= 3.1.0'
 
 group :development, :test do
   gem 'sqlite3'
   gem 'pry'
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
+  gem 'rspec-rails', '>= 3.8.0'
+  gem 'factory_bot_rails', '>= 4.10.0'
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '>= 3.6.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :test do
-  gem 'capybara', '~> 2.15'
+  gem 'capybara', '~> 3.0', '>= 3.0.0'
   gem 'selenium-webdriver'
-  gem 'chromedriver-helper'
+  gem 'chromedriver-helper', '>= 2.0.0'
   gem 'shoulda-matchers'
   gem 'webmock'
 end
