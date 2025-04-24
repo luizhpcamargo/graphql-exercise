@@ -3,16 +3,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.0'
 
-gem 'rails', '~> 5.2.0.rc1'
+gem 'rails', '~> 7.0.0.0'
 gem 'puma', '~> 3.11'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 6.0', '>= 6.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'slim-rails'
 gem 'pg', '~> 1.0'
 gem 'graphlient'
 
-gem 'foundation-rails'
+gem 'foundation-rails', '>= 6.5.1.0'
 gem 'autoprefixer-rails'
 gem 'draper'
 
