@@ -19,7 +19,7 @@ gem 'draper'
 group :development, :test do
   gem 'sqlite3'
   gem 'pry'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 8.0.0'
   gem 'factory_bot_rails'
 end
 
