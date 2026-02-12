@@ -10,7 +10,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'slim-rails'
 gem 'pg', '~> 1.0'
-gem 'graphlient'
+gem 'graphlient', '>= 0.7.0'
 
 gem 'foundation-rails'
 gem 'autoprefixer-rails'
